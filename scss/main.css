@@ -1,0 +1,441 @@
+@charset "UTF-8";
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  animation-name: reveal;
+  animation-duration: 1s;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+header {
+  color: #8d7f72;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.final_screen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  display: grid;
+  grid: 20% 40% 40%/100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.final_screen h1 {
+  color: white;
+  font-size: 3rem;
+}
+.final_screen_score {
+  color: white;
+}
+.final_screen_score h2 {
+  font-size: 3rem;
+}
+.final_screen_btns {
+  height: 50%;
+}
+.final_screen_btns button {
+  color: white;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.final_screen_btns button:hover {
+  transform: scale(1.5);
+  transform: ease;
+}
+.final_screen p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.win_screen {
+  background: #f1d05c;
+}
+
+.loose_screen {
+  background: #f65e3b;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  width: 100vw;
+}
+
+.options {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.options_new-game {
+  color: white;
+  background-color: #766b60;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.options_score {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  background-color: #a4998e;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+.options_score-count {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.options_best-score {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  background-color: #a4998e;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.options_best-score-count {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.game-space {
+  width: 90vw;
+  padding: 0.5rem;
+  height: 90vw;
+  justify-self: center;
+  margin-top: 1rem;
+  background-color: #afa59c;
+  border-radius: 5px;
+  display: grid;
+  grid: repeat(4, 1fr)/repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.game-space_board-square {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb2aa;
+  border-radius: 5px;
+}
+.game-space_2, .game-space_4 {
+  color: #8d7f72;
+}
+.game-space_8, .game-space_16, .game-space_32, .game-space_64, .game-space_128, .game-space_256, .game-space_512, .game-space_1024, .game-space_2048 {
+  color: white;
+}
+.game-space_2, .game-space_4, .game-space_8, .game-space_16, .game-space_32, .game-space_64, .game-space_128, .game-space_256, .game-space_512, .game-space_1024, .game-space_2048 {
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.game-space_2 {
+  background-color: #eee4da;
+}
+.game-space_2::after {
+  content: "2";
+}
+.game-space_4 {
+  background-color: #eee1c9;
+}
+.game-space_4::after {
+  content: "4";
+}
+.game-space_8 {
+  background-color: #f3b27a;
+}
+.game-space_8::after {
+  content: "8";
+}
+.game-space_16 {
+  background-color: #f69664;
+}
+.game-space_16::after {
+  content: "16";
+}
+.game-space_32 {
+  background-color: #f67c60;
+}
+.game-space_32::after {
+  content: "32";
+}
+.game-space_64 {
+  background-color: #f65e3b;
+}
+.game-space_64::after {
+  content: "64";
+}
+.game-space_128 {
+  background-color: #edcf73;
+}
+.game-space_128::after {
+  content: "128";
+}
+.game-space_256 {
+  background-color: #edcc62;
+}
+.game-space_256::after {
+  content: "256";
+}
+.game-space_512 {
+  background-color: #edc850;
+}
+.game-space_512::after {
+  content: "512";
+}
+.game-space_1024 {
+  background-color: #edc53f;
+}
+.game-space_1024::after {
+  content: "1024";
+}
+.game-space_2048 {
+  background-color: #edc22d;
+}
+.game-space_2048::after {
+  content: "2048";
+}
+
+.controls {
+  margin-top: 1rem;
+  width: 50vw;
+  height: 6rem;
+  justify-self: center;
+  display: grid;
+  grid-template-areas: "left top right" "left down right";
+}
+.controls_top, .controls_down, .controls_left, .controls_right {
+  display: grid;
+  background-color: #766b60;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0.25rem;
+}
+.controls_top {
+  grid-area: top;
+}
+.controls_top:hover {
+  cursor: pointer;
+}
+.controls_top::after {
+  content: "▲";
+}
+.controls_down {
+  grid-area: down;
+}
+.controls_down:hover {
+  cursor: pointer;
+}
+.controls_down::after {
+  content: "▼";
+}
+.controls_left {
+  grid-area: left;
+}
+.controls_left:hover {
+  cursor: pointer;
+}
+.controls_left::after {
+  content: "▲";
+  transform: rotate(-90deg);
+}
+.controls_right {
+  grid-area: right;
+}
+.controls_right:hover {
+  cursor: pointer;
+}
+.controls_right::after {
+  content: "▲";
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
+  .options_new-game {
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+  .options_score {
+    font-size: 1.5rem;
+    width: 8rem;
+  }
+  .options_score-count {
+    font-size: 1.5rem;
+  }
+  .options_best-score {
+    font-size: 1.4rem;
+    width: 8rem;
+  }
+  .options_best-score-count {
+    font-size: 1.5rem;
+  }
+  .game-space {
+    width: 75vw;
+    height: 75vw;
+  }
+  .game-space_2, .game-space_4, .game-space_8, .game-space_16, .game-space_32, .game-space_64, .game-space_128, .game-space_256, .game-space_512, .game-space_1024, .game-space_2048 {
+    font-size: 2.5rem;
+  }
+  .controls {
+    height: 10rem;
+    margin-top: 2rem;
+  }
+  .controls_top, .controls_down, .controls_left, .controls_right {
+    font-size: 2.5rem;
+  }
+  .final_screen h1 {
+    font-size: 4rem;
+  }
+  .final_screen_score h2 {
+    font-size: 4rem;
+  }
+  .final_screen_btns button {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    width: 100vw;
+    height: 100vh;
+    grid: 10vh 65vh/65vh 50vh;
+    row-gap: 1rem;
+  }
+  .options {
+    grid-column: 1/3;
+  }
+  .game-space {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .game-space_2, .game-space_4, .game-space_8, .game-space_16, .game-space_32, .game-space_64, .game-space_128, .game-space_256, .game-space_512, .game-space_1024, .game-space_2048 {
+    font-size: 2.5rem;
+  }
+  .controls {
+    width: 80%;
+    height: 50%;
+    margin-top: 2rem;
+    align-self: center;
+  }
+  .controls_top, .controls_down, .controls_left, .controls_right {
+    font-size: 2.5rem;
+  }
+  .controls_left {
+    height: 50%;
+    align-self: center;
+  }
+  .controls_right {
+    height: 50%;
+    align-self: center;
+  }
+  .final_screen h1 {
+    font-size: 4rem;
+  }
+  .final_screen_score h2 {
+    font-size: 4rem;
+  }
+  .final_screen_btns button {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    width: 100vw;
+    height: 100vh;
+    grid: 10vh 65vh/65vh 50vh;
+    row-gap: 1rem;
+  }
+  .options {
+    grid-column: 1/3;
+  }
+  .game-space {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .game-space_2, .game-space_4, .game-space_8, .game-space_16, .game-space_32, .game-space_64, .game-space_128, .game-space_256, .game-space_512, .game-space_1024, .game-space_2048 {
+    font-size: 2.5rem;
+  }
+  .controls {
+    width: 80%;
+    height: 50%;
+    margin-top: 2rem;
+    align-self: center;
+  }
+  .controls_top, .controls_down, .controls_left, .controls_right {
+    font-size: 2.5rem;
+  }
+  .controls_left {
+    height: 50%;
+    align-self: center;
+  }
+  .controls_right {
+    height: 50%;
+    align-self: center;
+  }
+  .final_screen h1 {
+    font-size: 4rem;
+  }
+  .final_screen_score h2 {
+    font-size: 4rem;
+  }
+  .final_screen_btns button {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=main.css.map */

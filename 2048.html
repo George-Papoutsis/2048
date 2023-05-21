@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.css" />
+    <title>2048</title>
+  </head>
+  <body>
+    <div class="final_screen hidden">
+      <h1 class="message"></h1>
+      <div class="final_screen_score">
+        <h2>Score:</h2>
+        <p class="final_score"></p>
+      </div>
+      <div class="final_screen_btns">
+        <button id="playAgain_btn">Play Again</button>
+      </div>
+    </div>
+    <header><h1>2048</h1></header>
+    <main>
+      <div class="options">
+        <button class="options_new-game">New Game</button>
+        <div class="options_score">
+          SCORE
+          <p class="options_score-count"></p>
+        </div>
+        <div class="options_best-score">
+          BEST SCORE
+          <p class="options_best-score-count">0</p>
+        </div>
+      </div>
+      <div class="game-space">
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+        <div class="game-space_board-square"></div>
+      </div>
+
+      <div class="controls">
+        <div class="controls_left"></div>
+        <div class="controls_top"></div>
+        <div class="controls_right"></div>
+        <div class="controls_down"></div>
+      </div>
+    </main>
+  </body>
+  <script src="2048.js"></script>
+</html>

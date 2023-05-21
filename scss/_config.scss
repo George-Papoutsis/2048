@@ -1,0 +1,62 @@
+//variables
+$primary-color: #8d7f72;
+$two-color: #eee4da;
+$four-color: #eee1c9;
+$eight-color: #f3b27a;
+$sixteen-color: #f69664;
+$thirtytwo-color: #f67c60;
+$sixtyfour-color: #f65e3b;
+$onetwentyeight-color: #edcf73;
+$twofiftysix-color: #edcc62;
+$fivetwelve-color: #edc850;
+$tentwentyfour-color: #edc53f;
+$twentyfourtyeight-color: #edc22d;
+
+$font-sizes: (
+    "title": 3rem,
+    "subtitle": 1rem,
+    "paragraph": 0.75rem,
+    "square": 1.5rem,
+    "md-square": 2.5rem,
+);
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function size($size-name) {
+    @return map-get($font-sizes, $size-name);
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
